@@ -1,0 +1,162 @@
+@import "../../common/lib/weui.wxss";
+
+page{
+    background: white;
+}
+#header{
+    width:100%;
+    height:260px;
+    background: #008EE3;
+    color:#ffffff;
+}
+#header .content{
+    padding-top:60px;
+    text-align: center;
+}
+#header .content image{
+    width:100px;
+    height:100px;
+    border-radius: 100px;
+}
+#header .content .nickname{
+    padding-top:20px;
+}
+#header .content .orther{
+    padding-top:10px;
+    font-size:15px;
+}
+#section .icon{
+    width:23px;
+    height:23px;
+}
+#section .menus_title{
+    display: block;
+}
+#section .menus_title text{
+    font-size:13px;
+}
+#menus{
+    background: #ffffff;
+    margin-top:10px;
+    height:auto;
+    width:100%;
+}
+#menus .content{
+    height:45px;
+    border-bottom: 0.5px solid #ebebeb; 
+}
+#menus .content .view{
+    float: left;
+    border-bottom: 1rpx solid #eee;
+}
+#menus .content .view text{
+    font-size:15px;
+    line-height:45px;
+    padding-left:20px;
+}
+#menus .content .right{
+    height: 45px;
+    float: right;
+    margin-right:10px;
+    line-height: 45px;
+}
+
+#box{
+  display: flex;
+  flex-direction: row;
+}
+
+.TwoIcon{
+  width: 100%;
+  /* height: 100px; */
+}
+
+.weui-grids1 {
+  border-top: 0rpx solid #D9D9D9;
+  border-left: 1rpx solid #D9D9D9;
+  overflow: hidden;
+}
+.weui-grid1 {
+  position: relative;
+  float: left;
+  padding: 10px 10px;
+  width: 50%;
+  box-sizing: border-box;
+  border-right: 0rpx solid #D9D9D9;
+  border-bottom: 2rpx solid #D9D9D9;
+  height: 80px;
+  background: white;
+}
+.weui-grid_active1 {
+  background-color: #ECECEC;
+}
+
+.weui-grid__icon1 {
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin: 0 auto;
+}
+.weui-grid__label1 {
+  margin-top: 5px;
+  display: block;
+  text-align: center;
+  color: #000000;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.content1{
+  padding-bottom: 5px;
+  height: 40px;
+  border: 1rpx;
+  border-bottom-style:solid;
+  box-sizing:border-box;
+  /* border-style: solid; */
+  padding-left: 20px;
+}
+
+/*列表*/
+.person-list {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background: white;
+}
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+}
+.item-image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 20rpx;
+}
+.item-text {
+  color: black;
+  font-size: 25rpx;
+  margin-left: 20rpx;
+}
+.person-line {
+  width: 100%;
+  height: 2rpx;
+  background: lightgray;
+  margin-left: 90rpx; 
+}
+
+.person-line1 {
+  width: 100%;
+  height: 2rpx;
+  background: lightgray;
+}
+
+.next-image {
+  width: 30rpx;
+  height: 45rpx;
+  position: absolute;
+  right: 10rpx;
+}

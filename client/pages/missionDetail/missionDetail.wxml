@@ -1,0 +1,27 @@
+<view class="person-line"></view>
+<view class="article__item">
+   <view class="article__thumb">
+    <image class="article__image" src="{{default_image}}"></image>
+  </view> 
+  <view class="article__info">
+    <view class="article__title article__title__large">{{publisher_id}}</view>
+    <view class="article__title article__title__large">发布于{{publish_time}}</view>
+  </view>
+</view>
+<view class="person-line1"></view>
+<view class="article__item">
+  <text class="price-color">¥</text>
+  <text class='priceColor'>{{price}}</text>
+</view>
+<view class='detail'>
+  <!-- <text class='detail_title'>详细内容：</text>
+  <text class="detail">{{detail}}</text> -->
+  <text class='detail_title'>{{title}}</text>
+  <text class='detail-text'>需要{{num_of_people}}人
+        详细内容：{{detail}}</text>
+</view>
+
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+  <button class="button-red" bindtap="immeGet" formType="submit">立即领取任务</button>
+</view>

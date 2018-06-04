@@ -1,0 +1,32 @@
+<!--pages/im/im.wxml-->
+<view class='container'>
+
+  <view class="page-head">
+    <view class="page-head-title">举报</view>
+    <view class="page-head-line"></view>
+  </view>
+
+  <view class="page-body">
+    
+    <view class="page-section">
+      <view class="page-section-title">举报原因</view>
+      <view class="textarea-wrp">
+        <textarea bindblur="bindTextAreaBlur" auto-height auto-focus placeholder="请描述举报的详细原因" />
+      </view>
+    </view>
+
+    <view class="page-section_row">
+      <view class="weui-cells__title">举报类型</view>
+      <view class="weui-cells weui-cells_after-title" style='width:70%'>
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" auto-focus placeholder="选择类型" />
+        </view>
+      </view>
+      
+    </view>
+  </view>
+  <view class="page-section_row">
+    <button type="primary" form-type='submint'>提交举报</button>
+    <button type="warn" form-type='reset'>清空输入</button>
+  </view>
+</view>

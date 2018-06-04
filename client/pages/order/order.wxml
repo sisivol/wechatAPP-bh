@@ -1,0 +1,32 @@
+<!--导航条-->
+<view class="navbar">
+  <block wx:for="{{posts_key}}">
+    <view class="item {{curNav==item.id ? 'active' : ''}}" data-idx="{{index}}" wx:key="unique" bindtap="switchTab" data-id="{{item.id}}">{{item.name}}</view>
+  </block>
+</view>
+<view class="person-line"></view>
+<view>
+  <view wx:if="{{posts_key[curNav].ishaveChild}}">
+    <block wx:for="{{posts_key[curNav].children}}" wx:for-item="item">
+      <navigator url="">
+        <view class="article__item">
+          <view class="article__thumb">
+            <image class="article__image" src="{{item.image}}"></image>
+          </view>
+          <view class="article__info">
+            <view class="article__title article__title__large">{{item.title}}</view>
+            <view class="article__desc">
+              <text class="article__time">任务金额：{{item.price}}</text>
+              <view class="article__count">
+                <image class="article__icon" src="/pages/images/clock.jpg"></image>
+                <text>发布时间：{{item.publish_time}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  <!--如果无数据，则显示数据-->
+  <view class="nodata_text" wx:else>该分类暂无数据</view>
+</view>

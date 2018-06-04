@@ -1,0 +1,57 @@
+<view class="container">
+<view class="page">
+<view class="nav">
+        <view class="nav-son {{shownavindex == 1? 'active' : ''}}" bindtap="listqy" data-nav="1">
+            <view class="content">区域</view>
+            <view class="icon"></view>
+        </view>
+        <view class="nav-son borders {{shownavindex == 2? 'active' : ''}}" bindtap="list" data-nav="2">
+            <view class="content">女装</view>
+            <view class="icon"></view>
+        </view>
+        <view class="nav-son {{shownavindex == 3? 'active' : ''}}" bindtap="listpx" data-nav="3">
+            <view class="content">排序</view>
+            <view class="icon"></view>
+        </view>
+    </view>
+
+    <view class="temp temp1 {{nzopen ? 'slidown' : 'slidup'}} {{nzshow ? 'disappear':''}}">
+        <view wx:for="{{content}}" wx:for-index="idx" data-id='{{item.id}}'>
+        <view bindtap='listnz2' id="{{idx}}">{{item}}</view>
+        </view>
+    </view>
+    <view class="temp temp2 {{pxopen ? 'slidown' : 'slidup'}} {{pxshow ? 'disappear':''}}">
+        <view wx:for="{{content}}"  wx:for-index="idx" data-id='{{item.id}}'>
+         <view bindtap='listpx2' id="{{idx}}">{{item}}</view>
+        </view>
+    </view>
+     <!-- <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>  -->
+</view>
+
+  
+<navigator url="../missionDetail/missionDetail?title={{missionData[idx].title}}&price={{missionData[idx].price}}&id={{missionData[idx].id}}&sort_id={{missionData[idx].sort_id}}&num_of_people={{missionData[idx].num_of_people}}" class="article__item" wx:for="{{missionData}}" wx:for-index="idx" wx:for-item="itemName" bindtap='move' wx:if='{{(missionData[idx].sort_id*flag==flag*flag)}}'>
+        <view  class="article__thumb">
+            <image class="article__image" src='../../image/{{missionData[idx].sort_id}}.png'></image>
+        </view>
+        <view class="article__info">
+            <view class="article__title article__title__large">{{missionData[idx].title}}</view>
+            <!--<view class="article__desc">
+                {{ summary }}
+            </view>-->
+            
+            <view class="article__desc">
+                
+                <text class="article__time">任务金额：{{missionData[idx].price}}</text>
+                <view class="article__count">
+                    <image class="article__icon" src="../../image/report.png"></image>
+                    <text>举报</text>
+                    <image class="article__icon" src="../../image/star.png"></image>
+                    <text>收藏</text>
+                </view>
+            </view>
+        </view>
+    
+    </navigator>
+    
+</view>
+

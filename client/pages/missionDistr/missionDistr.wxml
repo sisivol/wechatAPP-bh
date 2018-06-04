@@ -1,0 +1,46 @@
+<!--pages/missiomDistr/missionDistr.wxml-->
+<view class='container'>
+
+  <view class="page-head">
+    <view class="page-head-title">发布任务</view>
+    <view class="page-head-line"></view>
+
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="page-body">
+      <view class="page-section">
+        <view class="weui-cells__title">任务标题</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <input class="weui-input" name='title' auto-focus placeholder="请输入任务标题" />
+          </view>
+        </view>
+      </view>
+      <view class="page-section">
+        <view class="page-section-title">任务要求</view>
+        <view class="textarea-wrp">
+          <textarea name='detail' auto-height auto-focus placeholder="请尽可能详细描述任务要求，例如时间、地点等信息" />
+        </view>
+      </view>
+
+      <view class="page-section_row">
+        <view class="weui-cells__title">金额</view>
+        <view class="weui-cells weui-cells_after-title" style='width:35%'>
+          <view class="weui-cell weui-cell_input">
+            <input class="weui-input" name='price' type='digit' auto-focus placeholder="0.00" />
+          </view>
+        </view>
+        <view class="weui-cells__title">人数</view>
+        <view class="weui-cells weui-cells_after-title" style='width:35%'>
+          <view class="weui-cell weui-cell_input">
+            <input class="weui-input" name='num_of_people' type='digit' auto-focus placeholder="1" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="page-section_row">
+      <button type="primary" formType="submit">提交任务</button>
+      <button formType="reset">清空输入</button>
+    </view>
+  </form>
+</view>

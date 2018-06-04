@@ -1,0 +1,53 @@
+<view id="header">
+  <view class="content">
+    <image src="/pages/images/head.jpg"></image>
+    <view class="nickname">{{nickname}}</view>
+  </view>
+</view>
+<view class="TwoIcon">
+  <view class="weui-grids1">
+    <navigator url="" class="weui-grid1" hover-class="weui-grid_active1">
+      <image class="weui-grid__icon1" src="/pages/images/money.png" />
+      <view class="weui-grid__label1">余额：{{balance}}</view>
+    </navigator>
+    <navigator url="" class="weui-grid1" hover-class="weui-grid_active1">
+      <image class="weui-grid__icon1" src="/pages/images/gold.png" />
+      <view class="weui-grid__label1">金币:{{coin}}</view>
+    </navigator>
+  </view>
+</view>
+<view class="separate"></view>
+<view class="person-line1"></view>
+<view class="person-list" catchtap="toOrder">
+  <view class="list-item">
+    <image class="item-image" src="/pages/images/order.png"></image>
+    <text class="item-text">我的订单</text>
+    <image class="next-image" src="/pages/images/next.jpg"></image>
+  </view>
+</view>
+<view class="person-line"></view>
+<view class="person-list">
+  <view class="list-item">
+    <image class="item-image" src="/pages/images/fav.png"></image>
+    <text class="item-text">我的收藏</text>
+    <image class="next-image" src="/pages/images/next.jpg"></image>
+  </view>
+</view>
+<view class="person-line"></view>
+<view class="person-list">
+  <view class="list-item">
+    <image class="item-image" src="/pages/images/service.png"></image>
+    <text class="item-text">客户中心</text>
+    <image class="next-image" src="/pages/images/next.jpg"></image>
+  </view>
+</view>
+<view class="person-line"></view>
+<view class="person-list">
+  <view class="list-item">
+    <image class="item-image" src="/pages/images/setting.png"></image>
+    <text class="item-text">设置</text>
+    <image class="next-image" src="/pages/images/next.jpg"></image>
+  </view>
+  <view class="person-line"></view>
+</view>
+<view class="separate"></view>

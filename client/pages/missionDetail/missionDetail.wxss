@@ -1,0 +1,152 @@
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #F9F7F7;
+}
+
+.detail_title {
+  font-size: 40rpx;
+  font-family: MicroSoft Yahei;
+  /* font-weight: bold; */
+  margin: 10rpx;
+  color: black;
+  text-align: justify;
+}
+.detail_price {
+  color: red;
+  font-size: 40rpx;
+  margin: 10rpx;
+}
+
+.detail-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  float: left;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100rpx;
+}
+
+.button-red {
+  background-color: #f44336; /* 红色 */
+}
+
+button {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30rpx;
+  border-radius: 0rpx;
+  width: 50%;
+  height: 100%;
+  line-height: 100rpx;
+}
+
+/* 占位 */
+.temp {
+  height: 100rpx;
+}
+text {
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  margin: 10rpx;
+}
+
+.article__item{
+  display: flex; 
+  align-items: center;
+  /* border-bottom: 1rpx solid #eee; */
+  position: relative;
+  /* padding-bottom: 20rpx; */
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.article__info{
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+.article__title{
+  font-weight: 400;
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  display: block;
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+/* 支持多行 */
+.article__title__large{
+  font-size: 30rpx;
+  font-family: 'SimSun', Times, serif; 
+  /* font-weight: bold; */
+  text-align: left;
+  line-height: 0.8rem;
+}
+
+.article__price{
+  margin-right: 10rpx;
+  text-align: center;
+}
+
+.person-line1 {
+  /* width: 100%; */
+  height: 10rpx;
+  background: #F2F2F0;
+  /* margin-left: 30rpx;
+  margin-right: 30rpx; */
+}
+
+.person-line {
+  /* width: 100%; */
+  height: 5rpx;
+  background: #F9F7F7;
+  /* margin-left: 30rpx;
+  margin-right: 30rpx; */
+}
+
+.article__image{
+  width:2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border-color: #ffffff;
+}
+
+.article__thumb{
+  width:3rem;
+  height: 3rem;
+  margin-right: 0.6rem;
+}
+
+.article__time{
+  margin-right: 10rpx;
+}
+
+.detail{
+  margin-left: 1rem; 
+
+}
+
+.detail-text{
+  line-height: 40rpx;
+}
+
+.price-color{
+  color: red;
+}
+
+.priceColor{
+  color: red;
+  font-size: 50rpx;
+}

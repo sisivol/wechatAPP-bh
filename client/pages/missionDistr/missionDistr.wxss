@@ -1,0 +1,13 @@
+/* pages/missiomDistr/missionDistr.wxss */
+@import "../../common/lib/weui.wxss";
+textarea {
+    width: 700rpx;
+    padding: 25rpx 0;
+    height: 400rpx;
+    auto-height: true;          
+}
+.textarea-wrp {
+    padding: 0 25rpx;
+    background-color: #fff;
+    height: 400rpx;
+}

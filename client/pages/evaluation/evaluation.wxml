@@ -1,0 +1,32 @@
+<!--pages/im/im.wxml-->
+<view class='container'>
+
+  <view class="page-head">
+    <view class="page-head-title">任务评价</view>
+    <view class="page-head-line"></view>
+  </view>
+
+  <view class="page-body">
+    
+    <view class="page-section">
+      <view class="page-section-title">评价内容</view>
+      <view class="textarea-wrp">
+        <textarea bindblur="bindTextAreaBlur" auto-height auto-focus placeholder="请输入对本次任务的评价内容"/>
+      </view>
+    </view>
+
+    <view class="page-section_row">
+      <view style='margin-top.3em' class="weui-cells__title">满意度</view>
+      <image style='height:30px;width:30px'  src='../../image/star2.png' ></image>
+      <image style='height:30px;width:30px'  src='../../image/star2.png' ></image>
+      <image style='height:30px;width:30px'  src='../../image/star2.png' ></image>
+      <image style='height:30px;width:30px'  src='../../image/star2.png' ></image>
+      <image style='height:30px;width:30px'  src='../../image/star2.png' ></image>
+
+    </view>
+  </view>
+  <view class="page-section_row">
+    <button type="primary" form-type='submint'>提交评价</button>
+    <button type="warn" form-type='reset'>清空输入</button>
+  </view>
+</view>

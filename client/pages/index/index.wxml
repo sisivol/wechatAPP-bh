@@ -1,0 +1,128 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='addressShell'>
+
+    <image class="weui-grid__icon" src='../../image/location.png' bindtap='onChangeAddress' />
+
+    <view style='flex:1' class='address' bindtap='onChangeAddress'>
+      {{address}}
+    </view>
+  </view>
+
+  <view class='searchShell'>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" disabled='true' placeholder="搜索任务、用户" bindtap="wxSearchTab" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+   <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{localImg}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="fourIcon">
+    <view class="weui-grids1">
+      <navigator url="" class="weui-grid1" hover-class="weui-grid_active1">
+        <image class="weui-grid__icon1" src="../../image/shop1.png" />
+        <view class="weui-grid__label1">猎人商店</view>
+      </navigator>
+      <navigator url="../report/report" class="weui-grid1" hover-class="weui-grid_active1">
+        <image class="weui-grid__icon1" src="../../image/jianzhi1.png" />
+        <view class="weui-grid__label1">大学生兼职</view>
+      </navigator>
+
+      <navigator url="../evaluation/evaluation" class="weui-grid1" hover-class="weui-grid_active1">
+        <image class="weui-grid__icon1" src="../../image/schoolMap1.png" />
+        <view class="weui-grid__label1">高校地图</view>
+      </navigator>
+      <navigator url="../missionDistr/missionDistr" class="weui-grid1" hover-class="weui-grid_active1">
+        <image class="weui-grid__icon1" src="../../image/hot.png" />
+        <view class="weui-grid__label1">发布任务</view>
+      </navigator>
+    </view>
+  </view>
+
+<view class='missionRecommend'>推 荐 任 务</view>
+
+  
+    <navigator url="">
+    <view class="article__item">
+        <view class="article__thumb">
+            <image class="article__image" src="../../image/1.png"></image>
+        </view>
+        <view class="article__info">
+            <view class="article__title article__title__large">买午餐</view>
+            <!--<view class="article__desc">
+                {{ summary }}
+            </view>-->
+            <view class="article__desc">
+                
+                <text class="article__time">任务金额：2.00</text>
+                <view class="article__count">
+                    <image class="article__icon" src="../../image/report.png"></image>
+                    <text>举报</text>
+                    <image class="article__icon" src="../../image/star.png"></image>
+                    <text>收藏</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    </navigator>
+    <navigator url="">
+    <view class="article__item">
+        <view class="article__thumb">
+            <image class="article__image" src="../../image/2.png"></image>
+        </view>
+        <view class="article__info">
+            <view class="article__title article__title__large">想转计算机专业，找学习辅导</view>
+            <!--<view class="article__desc">
+                {{ summary }}
+            </view>-->
+            <view class="article__desc">
+                
+                <text class="article__time">任务金额：50.00</text>
+                <view class="article__count">
+                    <image class="article__icon" src="../../image/report.png"></image>
+                    <text>举报</text>
+                    <image class="article__icon" src="../../image/star.png"></image>
+                    <text>收藏</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    </navigator>
+    <navigator url="">
+    <view class="article__item">
+        <view class="article__thumb">
+            <image class="article__image" src="../../image/1.png"></image>
+        </view>
+        <view class="article__info">
+            <view class="article__title article__title__large">买周黑鸭</view>
+            <!--<view class="article__desc">
+                {{ summary }}
+            </view>-->
+            <view class="article__desc">
+                
+                <text class="article__time">任务金额：5.00</text>
+                <view class="article__count">
+                    <image class="article__icon" src="../../image/report.png"></image>
+                    <text>举报</text>
+                    <image class="article__icon" src="../../image/star.png"></image>
+                    <text>收藏</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    </navigator>
+</view>
