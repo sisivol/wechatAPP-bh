@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
     "pages/im/im",
     "pages/missionDistr/missionDistr",
     "pages/me/me",
@@ -10,7 +9,8 @@
     "pages/evaluation/evaluation",
     "pages/report/report",
     "pages/missionDetail/missionDetail",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",

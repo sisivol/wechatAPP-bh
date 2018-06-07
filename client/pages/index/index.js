@@ -21,19 +21,27 @@ Page({
     autoplay: true,
     interval: 2000,
     duration: 500,
-    localImg:[
+    localImg: [
       '../../image/banner/1.png',
       '../../image/banner/2.jpg',
       '../../image/banner/3.jpg',
     ]
   },
 
-  onShow:function(options){
-    var location=app.globalData.currentLocation;
-    var that=this;
-    if(location != null && location != '')
-    that.setData({
-      address:location
+  onShow: function () {
+    var location = app.globalData.currentLocation;
+    var that = this;
+    if (location != null && location != '')
+      that.setData({
+        address: location
+      })
+    wx.getSetting({
+      success: function (res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          that.getMissionData()
+        }
+      }
     })
   },
   getMissionData() {
@@ -56,15 +64,40 @@ Page({
     })
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
   onLoad: function (options) {
+    wx.getSetting({
+      success: function (res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: function (res) {
+              console.log(res.userInfo)
+            }
+          })
+        } else {
+          wx.showModal({
+            title: '警告',
+            content: '尚未进行授权，请点击确定跳转到授权页面进行授权。',
+            success: function (res) {
+              if (res.confirm) {
+                console.log('用户点击确定')
+                wx.navigateTo({
+                  url: '../login/login',
+                })
+              }
+            }
+          })
+        }
+      }
+    })
     /*判断是第一次加载还是从position页面返回
     如果从position页面返回，会传递用户选择的地点*/
-    this.getMissionData();
+    //this.getMissionData();
     if (options.address != null && options.address != '') {
       //设置变量 address 的值
       this.setData({
@@ -93,7 +126,9 @@ Page({
       });
     }
   },
-
+  bindGetUserInfo: function (e) {
+    console.log(e.detail.userInfo)
+  },
   onChangeAddress: function (e) {
     wx.navigateTo({
       url: "/pages/position/position"

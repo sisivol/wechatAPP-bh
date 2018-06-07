@@ -17,7 +17,7 @@ App({
     //wx.setStorageSync('logs', logs)
     qcloud.setLoginUrl(config.service.loginUrl);  //设置登录地址
     
-    this.doLogin();
+    //this.doLogin();
   },
   doLogin() { //登录
     let that = this

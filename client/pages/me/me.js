@@ -29,14 +29,14 @@ Page({
   getBalance:function(){
     qcloud.request({
       login: false,
-      url: app.appData.baseUrl + 'getBlance',
+      url: app.appData.baseUrl + 'getBalance',
       data: {
         openId: this.data.userInfo.openId
       },
       success: (res) => {
         this.setData({
-          balance: res.data.balance,
-          coin: res.data.coin
+          balance: res.data.data[0].balance,
+          coin: res.data.data[0].coin
         })
         console.lo
       },

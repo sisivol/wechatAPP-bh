@@ -1,7 +1,7 @@
 <view id="header">
   <view class="content">
-    <image src="/pages/images/head.jpg"></image>
-    <view class="nickname">{{nickname}}</view>
+    <image src='{{userInfo.avatarUrl}}' ></image>
+    <view class="nickname">{{userInfo.nickName}}</view>
   </view>
 </view>
 <view class="TwoIcon">
