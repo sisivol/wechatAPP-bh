@@ -12,11 +12,14 @@ Page({
     duration: 1000, //  滑动动画时长1s
     title: '',
     price: '',
-    publisher_id: '',
+    publisher: '',
     detail: '',
     userInfo: {},
     openId: '',
-    id: ''
+    id: '',
+    num_of_people:1,
+    avatarUrl:'',
+    publish_time:null
   },
 
   setTitle: function () {
@@ -37,16 +40,21 @@ Page({
         },
         success: (res) => {
           this.setData({
-            missionDetail: res.data.data,
-            title: res.data.data.title,
-            price: res.data.data.price,
-            publisher_id: res.data.data.publisher_id,
-            detail: res.data.data.detail
+            missionDetail: res.data.data[0],
+            title: res.data.data[0].title,
+            price: res.data.data[0].price,
+            publisher:JSON.parse(res.data.data[1].user_info).nickName,
+            detail: res.data.data[0].detail,
+            num_of_people: res.data.data[0].num_of_people,
+            avatarUrl: JSON.parse(res.data.data[1].user_info).avatarUrl,
+            publish_time:util.formatTime(new Date(Date.parse(res.data.data[0].publish_time)))
           })
           console.log(this.data.missionDetail)
+          console.log(this.data.publish_time)
         }
       })
     }
+    //this.data.publish_time = 
     app.pageGetUserInfo(this)
   },
 

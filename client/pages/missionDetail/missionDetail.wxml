@@ -1,10 +1,10 @@
 <view class="person-line"></view>
 <view class="article__item">
    <view class="article__thumb">
-    <image class="article__image" src="{{default_image}}"></image>
+    <image class="article__image" src="{{avatarUrl}}"></image>
   </view> 
   <view class="article__info">
-    <view class="article__title article__title__large">{{publisher_id}}</view>
+    <view class="article__title article__title__large">{{publisher}}</view>
     <view class="article__title article__title__large">发布于{{publish_time}}</view>
   </view>
 </view>

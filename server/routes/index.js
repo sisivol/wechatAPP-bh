@@ -33,37 +33,7 @@ router.get('/message', controllers.message.get)
 router.post('/message', controllers.message.post)
 
 
-/***********************业务请求路由 start***************************/
-//获取群ID
-router.get('/getGId', validationMiddleware, controllers.getGId)
 
-//请求得分数
-router.get('/getBalance', validationMiddleware, controllers.getBalance)
-
-//请求二维码图片地址
-router.get('/qr_address', validationMiddleware, controllers.qr_address)
-
-//请求题目分类
-router.get('/question_sort', validationMiddleware, controllers.question_sort)
-
-//存储用户分享后的信息(排行榜)
-router.get('/storeFriendsNetwork', validationMiddleware, controllers.storeFriendsNetwork)
-
-//获取好友用户关系表(排行榜)
-router.get('/getRankFriendsData', validationMiddleware, controllers.getRankFriendsData)
-
-//获取全球用户关系表(排行榜)
-router.get('/getRankGlobalData', validationMiddleware, controllers.getRankGlobalData)
-
-//存储用户关系点击表
-router.get('/storeUser_network', validationMiddleware, controllers.storeUser_network)
-
-//更新用户关系点击表中的fromClickId
-router.get('/upDateUser_networkFromClickId', validationMiddleware, controllers.upDateUser_networkFromClickId)
-
-
-//更新用户关系点击表中的param_1
-router.get('/upDateShareInfoToUser_network', validationMiddleware, controllers.upDateShareInfoToUser_network)
 
 //发布任务存储到missionTable
 router.post('/submitMission', validationMiddleware, controllers.submitMission)
@@ -77,7 +47,8 @@ router.get('/getMissionDetail', validationMiddleware, controllers.getMissionDeta
 //接受任务
 router.get('/receiveMission', validationMiddleware, controllers.receiveMission)
 
-
+//获得用户金额信息
+router.get('/getBalance', validationMiddleware, controllers.getBalance)
 
 /***********************业务请求路由 end***************************/
 
